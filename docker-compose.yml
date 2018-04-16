@@ -1,0 +1,31 @@
+version: '3'
+services:
+  # MySQL Server
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: homestead
+      MYSQL_ROOT_PASSWORD: secret
+    ports:
+      - "9999:3306"
+        
+  # Base web server
+  web:
+    build: . # means that it builds from our dockerfile spinning up a base webserver
+    ports:
+      - "8181:8181"
+    volumes: 
+      - "./:/app"
+    links:
+      - db
+      - redis
+  
+  # Redis instance
+  redis:
+    image: "redis:alpine"
+    restart: always
+    ports:
+      - "6379:6379"
+  
+  
