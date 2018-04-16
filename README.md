@@ -9,7 +9,7 @@ Items you'll need to get started:
 1. [Composer](https://getcomposer.org/download/)
 1. [Node & NPM](https://nodejs.org/en/download/)
 1. [Laravel](https://laravel.com/docs/5.6#installing-laravel)
-  - For `artisan` server
+   - For `artisan` server
 
 ### Getting Started
 
@@ -21,15 +21,14 @@ In addition, you can spin up the web server, a Redis instance, and a MySQL insta
 > Compose will create containers for a web server, Redis, and MySQL
 
 1. `docker-compose up`
-  - Creates instances of:
-    1. Web Server - `127.0.0.1:8181`
-    1. Redis - `127.0.0.1:9998`
-    1. MySQL - `127.0.0.1:9999`
-  - Append `-d` to run in the background
-1. Run `php artisan migrate`
+   - Creates instances of:
+     1. Web Server - `127.0.0.1:8181`
+     1. Redis - `127.0.0.1:9998`
+     1. MySQL - `127.0.0.1:9999`
+   - Append `-d` to run in the background
 1. Run Browserync by running `npm run watch`
 1. Edit application and see changes
-  - Kill the containers by running `CTRL-C`, or if you ran it in the background, `docker-compose down`.
+   - Kill the containers by running `CTRL-C`, or if you ran it in the background, `docker-compose down`.
 
 ### Helpful commmands
 1. **View containers** - `docker ps`, add `-a` to only show actively running containers
